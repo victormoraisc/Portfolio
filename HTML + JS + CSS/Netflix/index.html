@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloneflix</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="header">
+                <div class="logo">
+                    <img src="images/netflix-logo.png" alt="">
+                </div> <!--End logo Div-->
+                    <div class="menu">
+
+                        <div class="menu-left">
+                            <ul>
+                                <li>Início</li>
+                                <li>Séries</li>
+                                <li>Filmes</li>
+                                <li>Recentes</li>
+                                <li>Minha lista</li>
+                            </ul>
+                        </div> <!--End menu-left Div-->
+
+                        <div class="menu-right">
+                            <ul>
+                                <li><i class="fas fa-search"></i></li>
+                                <li>Infantil</li>
+                                <li><i class="fas fa-gift"></i></li>
+                                <li><i class="fas fa-bell"></i></li>
+                                <li class="user">
+                                    <img src="images/user.png" alt="">
+                                    <i class="fas fa-sort-down"></i>
+                                </li>   
+                            </ul>
+                        </div> <!--End menu-right Div-->
+
+                    </div><!--End menu Div-->
+
+            </div><!--End Header Div-->
+            <div class="header mobile">
+                <div class="menu-left">
+                    <div class="menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </div> <!--End menu div-->
+                    <div class="logo">
+                        <img src="images/netflix-logo.png" alt="">
+                    </div> <!--End logo Div-->
+                </div> <!--End menu-left Div--> 
+                <div class="menu-right">
+                    <div class="search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="dots">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="trailer">
+                <video autoplay muted loop>
+                    <source src="images/trailer.mp4" type="video/mp4" width="100%">
+                </video>
+                <div class="bottomBlur">
+
+                </div>
+            </div><!--End Trailer Div-->
+            <div class="banner">
+                <img src="images/banner.png" class="poster" alt="">
+                <span class="subtitle">
+                    Um clone simples da Netflix feito em HTML, CSS E JAVASCRIPT
+                </span>
+                <div class="buttons">
+                    <button class="btn"><i class="fas fa-play"></i>Assistir</button>
+                    <button class="btn"><i class="fas fa-plus"></i>Minha Lista</button>
+                </div>
+            </div><!--End Banner Div-->
+
+            <div class="category slider-container1">
+                <span>Recomendados</span>
+                <button class="prev-btn hidden"><i class="fa-solid fa-less-than fa-sm"></i></button>
+                <div class="slider slider-content">
+                    <div class="movie slide" id="movie1">
+                        <img src="images/video_001.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    95% relevante
+                                </span>
+                                <span class="classification" id="classification18">
+                                    18
+                                </span>
+                                <span id="seasons">
+                                    7 temporadas
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Calientes</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Gostinho de Novela</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Terror</li>
+                                </ul>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                    <div class="movie slide" id="movie2">
+                        <img src="images/video_002.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    97% relevante
+                                </span>
+                                <span class="classification" id="classification16">
+                                    16
+                                </span>
+                                <span id="seasons">
+                                    3 partes
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Espirituosos</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Empolgantes</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Mistério</li>
+                                </ul>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                    <div class="movie slide" id="movie3">
+                        <img src="images/video_003.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    95% relevante
+                                </span>
+                                <span class="classification" id="classification16">
+                                    16
+                                </span>
+                                <span id="seasons">
+                                    4 temporadas
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Apimentados</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Irreverentes</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Teen</li>
+                                </ul>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                    <div class="movie slide" id="movie4">
+                        <img src="images/video_004.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    95% relevante
+                                </span>
+                                <span class="classification" id="classification14">
+                                    14
+                                </span>
+                                <span id="seasons">
+                                    8 temporadas
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Besteirol</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Sitcom</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Vários protagonistas</li>
+                                </ul>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                    <div class="movie slide" id="movie5">
+                        <img src="images/video_005.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    98% relevante
+                                </span>
+                                <span class="classification" id="classification14">
+                                    14
+                                </span>
+                                <span id="seasons">
+                                    1 temporada
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Instigantes</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Irreverentes</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Aventura</li>
+                                </ul>
+                            </div>
+                            <div class="avaliations">
+                                <span class="classification" id="classification16">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                </span>
+                                <span id="mostLiked">
+                                       Mais curtidos
+                                </span>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                    <div class="movie slide" id="movie6">
+                        <img src="images/video_006.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    89% relevante
+                                </span>
+                                <span class="classification" id="classification14">
+                                    14
+                                </span>
+                                <span id="seasons">
+                                    9 episódios
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Explosivo</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Esperto</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Aventura</li>
+                                </ul>
+                            </div>
+                            <div class="avaliations">
+                                <span class="classification" id="classification16">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                </span>
+                                <span id="mostLiked">
+                                       Mais curtidos
+                                </span>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                </div><!--End Slider Div-->
+                <button class="next-btn"><i class="fa-solid fa-greater-than fa-sm"></i></button>
+            </div><!--End Category Div-->
+
+            <div class="category slider-container2">
+                <span>Top Movies</span>
+                <button class="prev-btn hidden"><i class="fa-solid fa-less-than fa-sm"></i></button>
+                <div class="slider slider-content">
+                    <div class="movie slide" id="movie7">
+                        <img src="images/video_006.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    89% relevante
+                                </span>
+                                <span class="classification" id="classification14">
+                                    14
+                                </span>
+                                <span id="seasons">
+                                    9 episódios
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Explosivo</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Esperto</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Aventura</li>
+                                </ul>
+                            </div>
+                            <div class="avaliations">
+                                <span class="classification" id="classification16">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                </span>
+                                <span id="mostLiked">
+                                       Mais curtidos
+                                </span>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                    <div class="movie slide" id="movie8">
+                        <img src="images/video_005.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    98% relevante
+                                </span>
+                                <span class="classification" id="classification14">
+                                    14
+                                </span>
+                                <span id="seasons">
+                                    1 temporada
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Instigantes</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Irreverentes</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Aventura</li>
+                                </ul>
+                            </div>
+                            <div class="avaliations">
+                                <span class="classification" id="classification16">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                </span>
+                                <span id="mostLiked">
+                                       Mais curtidos
+                                </span>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                    <div class="movie slide" id="movie9">
+                        <img src="images/video_004.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    95% relevante
+                                </span>
+                                <span class="classification" id="classification14">
+                                    14
+                                </span>
+                                <span id="seasons">
+                                    8 temporadas
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Besteirol</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Sitcom</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Vários protagonistas</li>
+                                </ul>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                    <div class="movie slide" id="movie10">
+                        <img src="images/video_003.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    95% relevante
+                                </span>
+                                <span class="classification" id="classification16">
+                                    16
+                                </span>
+                                <span id="seasons">
+                                    4 temporadas
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Apimentados</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Irreverentes</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Teen</li>
+                                </ul>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                    <div class="movie slide" id="movie11">
+                        <img src="images/video_002.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    97% relevante
+                                </span>
+                                <span class="classification" id="classification16">
+                                    16
+                                </span>
+                                <span id="seasons">
+                                    3 partes
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Espirituosos</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Empolgantes</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Mistério</li>
+                                </ul>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                    <div class="movie slide" id="movie12">
+                        <img src="images/video_001.jpg" alt="">
+                        <div class="controls">
+                            <button class="controlsButtons">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="controlsButtons" id="controlButton4">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="description">
+                                <span id="relevancy">
+                                    95% relevante
+                                </span>
+                                <span class="classification" id="classification18">
+                                    18
+                                </span>
+                                <span id="seasons">
+                                    7 temporadas
+                                </span>
+                                <span id="quality">
+                                    HD
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li>Calientes</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Gostinho de Novela</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                                    <li>Terror</li>
+                                </ul>
+                            </div>
+                        </div><!--End Controls Div-->
+                    </div>
+                </div><!--End Slider Div-->
+                <button class="next-btn"><i class="fa-solid fa-greater-than fa-sm"></i></button>
+            </div><!--End Category Div-->
+
+            <div class="footer">
+                <div class="social">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                </div><!--End Social-->
+                
+                <div class="flex">
+                    <div class="info">
+                        <ul>
+                            <li>Idioma e legendas</li>
+                            <li>Privacidade</li>
+                            <li>Entre em contato</li>
+                            <li>FAQ</li>
+                        </ul>
+                    </div><!--End Info-->
+
+                    <div class="info">
+                        <ul>
+                            <li>Idioma e legendas</li>
+                            <li>Privacidade</li>
+                            <li>Entre em contato</li>
+                            <li>FAQ</li>
+                        </ul>
+                    </div><!--End Info-->
+
+                    <div class="info">
+                        <ul>
+                            <li>Idioma e legendas</li>
+                            <li>Privacidade</li>
+                            <li>Entre em contato</li>
+                            <li>FAQ</li>
+                        </ul>
+                    </div><!--End Info-->
+
+                    <div class="info">
+                        <ul>
+                            <li>Idioma e legendas</li>
+                            <li>Privacidade</li>
+                            <li>Entre em contato</li>
+                            <li>FAQ</li>
+                        </ul>
+                    </div><!--End Info-->
+                </div><!--End Flex-->
+            </div><!--End Footer-->
+        </div><!--End Hero Div-->
+    </div><!--End Container Div-->
+</body>
+</html> 
