@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     position: relative;
     display: block;
@@ -21,13 +21,14 @@ body{
     left: 0;
     top: 0;
     z-index: -2;
+    width: 100%;
 }
 .trailer video{
     width: 100%;
-    min-width: 98vw;
     height: auto;
     position: relative;
     display: block;
+    max-width: none;
 }
 .hero{
     width: 100%;
@@ -483,7 +484,7 @@ body{
   }
 
 @media (max-width: 810px) {
-    .header.main{
+    .header{
         display: none;
     }
     .header.mobile{
@@ -539,6 +540,7 @@ body{
     }
     .category{
         overflow: scroll;
+        overflow-y: hidden;
     }
     .category::-webkit-scrollbar {
         display: none;
