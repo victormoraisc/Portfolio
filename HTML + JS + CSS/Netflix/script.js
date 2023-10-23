@@ -19,7 +19,6 @@ function toggleBackground() {
 
     // Add event listener to the window scroll event
     document.addEventListener('scroll', function() {
-        alert("scrolling");
         // Check if the scroll position is greater than 0
         if (window.scrollY > 0) {
             // Add 'black' class to the header
@@ -29,7 +28,7 @@ function toggleBackground() {
             header.classList.remove('black');
         }
     });
-}
+    }
 
 toggleBackground();
 
