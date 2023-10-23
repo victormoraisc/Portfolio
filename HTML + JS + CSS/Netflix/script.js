@@ -14,20 +14,21 @@ document.addEventListener('click', turnOnAudio);
  * Toggles the background color of the header based on the scroll position.
  */
 function toggleBackground() {
+    // Get the header element
     var header = document.querySelector('.header');
-    var body = document.body;
-    var html = document.documentElement;
 
-    function checkScroll() {
+    // Add event listener to the window scroll event
+    document.addEventListener('scroll', function() {
         alert("scrolling");
-        if (body.scrollTop > 0 || html.scrollTop > 0) {
+        // Check if the scroll position is greater than 0
+        if (window.scrollY > 0) {
+            // Add 'black' class to the header
             header.classList.add('black');
         } else {
+            // Remove 'black' class from the header
             header.classList.remove('black');
         }
-    }
-
-    window.addEventListener('scroll', checkScroll);
+    });
 }
 
 toggleBackground();
