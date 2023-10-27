@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Archivo';
+
+    border: 0;
+    outline: 0;
+    background: none;
+}
+
+html, body, #root{
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+:root{
+    --background-main:#080e46;
+    --background: #050d55;
+    --primary: #ffffff;
+    --secondary: #cecece;
+    --tertiary: #a1a1a1;
+    --quaternary: rgba(79, 214, 255, 0.05);
+    --quinterary: rgba(79, 214, 255, 0.1);
+    --border: #dbdbdb;
+    --font:'Archivo', sans-serif;
+}

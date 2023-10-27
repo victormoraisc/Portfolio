@@ -1,0 +1,56 @@
+.description-container {
+    position: relative; /* Adicione isso se a div não tiver um posicionamento definido */
+    display: grid;
+    grid-template: 
+    "sidebar title"
+    "sidebar content";
+    column-gap: 16px;
+}
+
+.description-container .description-sidebar {
+    display: block; /* ou inline-block */
+    height: 100%;
+    width: 3px;
+    grid-area: sidebar;
+}
+
+.description-container .description-title{
+    grid-area: title;
+    width: 100%;
+    font-size: calc(1rem + 1vw);
+    color: var(--secondary);
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.description-container .description-content{
+    grid-area: content;
+    font-size: calc(0.7rem + 1vw);
+    text-align: justify;
+    color: var(--tertiary)
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10% 0;
+}
+.social-media a div svg{
+    color: var(--tertiary);
+    width: 48px;
+    height: 48px;
+}
+@media (max-width: 880px)
+{
+    .social-media {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 2% 0;
+    }
+    .social-media a div svg{
+        width: 32px;
+        height: 32px;
+    }
+}

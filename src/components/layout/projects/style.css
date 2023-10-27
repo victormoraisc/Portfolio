@@ -1,0 +1,109 @@
+.projects-container{
+    position: relative;
+    top: 0;
+    padding: calc(128px + 5%) 5% 5% 5%;
+    width: 40%;
+    box-sizing: border-box;
+}
+.projects-header{
+    font-size: 2.3vw;
+    width: 100%;
+    color: var(--primary);
+}
+.projects-header-underline{
+    display: block;
+    height: 3px;
+    width: 100%;
+    margin: 1vh 0;
+}
+.projects-content{
+    margin: 2vh 0;
+    box-sizing: border-box;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    overflow-y: scroll;
+}
+.project-item{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.project-item:hover{
+    background-color: var(--quaternary);
+    border-radius: 3%;
+    border: 0 solid #e5e7eb;
+}
+.project-title{
+    font-size: calc(0.8rem + 1vw);
+    font-weight: 600;
+    color: var(--secondary) !important;
+    text-decoration: none;
+}
+a { text-decoration: none;}
+.project-description{
+    margin: 1vh 0;
+    font-size: calc(0.7rem + 1vw);
+    color: var(--tertiary);
+    text-align: justify;
+    max-width: 100%;
+}
+.project-tags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.project-tag{
+    border-radius: 30px;
+    display: block;
+    width: 70px;
+    height: 30px;
+    padding: 3px
+}
+.project-tag div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    border-radius: 30px;
+    height: 29px;
+    width: 70px;
+    color: var(--primary);
+    font-size: 12px;
+}
+
+
+  
+::-webkit-scrollbar {
+    width: 5px; /* largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--quaternary); /* cor de fundo da trilha */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--quinterary); /* cor de fundo do controle deslizante */
+    border-radius: 5px; /* borda arredondada do controle deslizante */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--tertiary); /* cor de fundo do controle deslizante ao passar o mouse */
+}
+
+@media (max-width: 880px)
+{
+    .projects-container{
+        position: relative;
+        top: 0;
+        padding: 5% 5% 5% 5%;
+        width: 100%;
+        height: 40%;
+        box-sizing: border-box;
+    }
+    .projects-content{
+        height: 100%;
+    }
+}
