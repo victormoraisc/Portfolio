@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .slider{
+            display: flex;
+            box-sizing: border-box;
+            min-height: 180px;
+            transition: transform 0.3s ease;
+        }
+        .slider .movie{
+            display: flex;
+            min-height: 180px;
+            transition: transform 0.3s ease;
+        }
+        .category{
+            display: flex;
+            padding: 0 3%;
+            margin-top: 3%;
+            position: relative;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .category span{
+            color: #e5e5e5;
+            font-size: 18px;
+            line-height: 17px;
+            font-weight: 600;
+            order: -1;
+        }
+        .movie{
+            background-color: rgb(20, 22, 22);
+            display: flex;
+            height: 180px;
+            flex-direction: column;
+            width: 320px;
+            position: absolute;
+        }
+        .movie:hover .controls{
+            display: block;
+        }
+        .controls{
+            padding: 3%;
+            display: block;
+            background-color: rgb(20, 22, 22);
+            position: fixed;
+            margin-top: 180px;
+            width: 320px;
+            box-sizing: border-box;
+        }
+        .controlsButtons{
+            border-radius: 64px;
+            width: 32px;
+            height: 32px;
+            border-color: lightgray;
+            border-style: solid;
+            border-width: 1px;
+            background-color: rgb(15, 15, 15);
+            color: lightgray;
+            font-size: .66rem;
+            position: relative;
+        }
+        .controlsButtons:hover{
+            background-color: white;
+            color: black;
+        }
+        #controlButton4{
+            position: absolute;
+            right: 0;
+            margin-right: 3%;
+        }
+        #relevancy
+        {
+            color:rgb(14, 206, 100);
+            font-weight: 600;
+            font-size: .85rem;
+        }
+        #classification{
+            color: #fff;
+            background-color: black;
+            text-align: center;
+            vertical-align: middle;
+            padding: 3px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        #seasons{
+            color: #a1a1a1;
+            font-size: .85rem;
+        }
+        #quality{
+            border: #a1a1a1 1px solid;
+            border-radius: 20%;
+            color: #a1a1a1;
+            font-size: .70rem;
+            font-weight: 600;
+            padding: 0 2%
+        }
+        .description{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .tags{
+            display: flex;
+            flex-direction: row;
+        }
+        .tags ul{
+            display: flex;
+            padding: 0;
+            font-size: 0.85rem;
+            justify-content: space-around;
+            color: white;
+            font-weight: 500;
+            width: 100%;
+            list-style-type: none;
+        }
+        .tags ul li i{
+            font-size: .4rem;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="category slider-container1">
+        <span>Recomendados</span>
+        <div class="slider slider-content">
+            <div class="movie slide" id="movie1">
+                <img src="images/video_001.jpg" alt="">
+                <div class="controls">
+                    <button class="controlsButtons">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </button>
+                    <button class="controlsButtons">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <button class="controlsButtons">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                    </button>
+                    <button class="controlsButtons" id="controlButton4">
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="description">
+                        <span id="relevancy">
+                            95% relevante
+                        </span>
+                        <span id="classification">
+                            18
+                        </span>
+                        <span id="seasons">
+                            7 temporadas
+                        </span>
+                        <span id="quality">
+                            HD
+                        </span>
+                    </div>
+                    <div class="tags">
+                        <ul>
+                            <li>Calientes</li>
+                            <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                            <li>Gostinho de Novela</li>
+                            <li><i class="fa fa-circle" aria-hidden="true"></i></li>
+                            <li>Terror</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
